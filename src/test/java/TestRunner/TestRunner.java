@@ -16,7 +16,7 @@ import java.util.Properties;
         ,glue={"com/test/stepDefinitions"  },
         monochrome = true,
         //junit = "--step-notifications",
-        tags="@test",
+        tags="@APItest",
         plugin = {
                 "pretty",
                 "html:target/CucumberReport/cucumber.html",
