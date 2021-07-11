@@ -101,21 +101,24 @@ public class TestNew extends ReadConfig {
 
 
         for (Map<Object, Object> data : options.asMaps(String.class, String.class)) {
+//
+//            RestAssured.baseURI = BASE_URL;
+//            RequestSpecification request = RestAssured.given();
+//
+//            ChatApi chatApi = new ChatApi((String) data.get("options"),user_name, user_id);
 
-            RestAssured.baseURI = BASE_URL;
-            RequestSpecification request = RestAssured.given();
+            System.out.println("Message Value : "+data.get("options").toString());
+            response = Helper.getChatApiResponse((String) data.get("options"),user_name, user_id);
 
-            ChatApi chatApi = new ChatApi((String) data.get("options"),user_name, user_id);
-
-            response = request
-                    .header("Content-type",prop.getProperty("Content-type"))
-                    .header("x-api-key",prop.getProperty("x-api-key"))
-                    .body(chatApi)
-                    .when()
-                    .post("/vhi")
-                    .then()
-                    // .log().all()
-                    .extract().response();
+//            response = request
+//                    .header("Content-type",prop.getProperty("Content-type"))
+//                    .header("x-api-key",prop.getProperty("x-api-key"))
+//                    .body(chatApi)
+//                    .when()
+//                    .post("/vhi")
+//                    .then()
+//                    // .log().all()
+//                    .extract().response();
         }
 
 
@@ -136,7 +139,7 @@ public class TestNew extends ReadConfig {
         message  = prop.getProperty("message") ;
         System.out.println("Default Message Value : "+message);
         for (int i = 0; i < noOfTimes; i++) {
-            System.out.println(i);
+//            System.out.println(i);
 
 //            RestAssured.baseURI = BASE_URL;
 //            RequestSpecification request = RestAssured.given();
@@ -282,4 +285,27 @@ public class TestNew extends ReadConfig {
     }
 
 
+    @Then("I select {string} in response")
+    public void iSelectInResponse(String arg0) {
+        response = Helper.getChatApiResponse(arg0,user_name, user_name);
+    }
+
+    @Then("I exit the consulation and go back to What would you like to do? page")
+    public void iExitTheConsulationAndGoBackToWhatWouldYouLikeToDoPage() {
+
+        JSONObject json = new JSONObject(response.asString());
+        JSONArray available_commands = json.getJSONArray("available_commands");
+
+        JSONObject available_commands1 = available_commands.getJSONObject(0);
+        String  command = available_commands1.get("command").toString();
+
+        //Very confirmation message
+        Assert.assertEquals(command, "STOP_CS");
+
+        System.out.println("Stopping the current consulation : ");
+
+        // Send command to stop the consulation and go back to What would you like to do next page
+        response = Helper.getChatApiResponse("STOP_CS",user_name, user_name);
+
+    }
 }
