@@ -16,15 +16,15 @@ import java.util.Properties;
         ,glue={"com/test/stepDefinitions"  },
         monochrome = true,
         //junit = "--step-notifications",
-        tags="@test",
+        tags="@DemoShopTest",
         plugin = {
                 "pretty",
                 "html:target/CucumberReport/cucumber.html",
                 "json:target/CucumberReport/cucumber.json",
                 "junit:target/CucumberReport/cucumber.xml",
-               // "com.cucumber.listener.ExtentCucumberFormatter:target/html/ExtentReport.html",
+
                  "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-                //"com.cucumber.listener.ExtentCucumberFormatter:target/CucumberReport/report.html"
+
         }
 )
 

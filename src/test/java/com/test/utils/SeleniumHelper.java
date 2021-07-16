@@ -1,9 +1,6 @@
 package com.test.utils;
 
-import com.google.inject.Inject;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.junit.Assert;
-import org.junit.rules.Timeout;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -15,15 +12,16 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
-public class SeleniumHelper {
+public class SeleniumHelper extends ReadConfig {
 
-    WebDriver driver;
+    WebDriver driver = ReadConfig.driver;
+
     WebElement element;
 
-    @Inject
-    public SeleniumHelper(WebDriver driver){
-        this.driver=driver;
-    }
+
+//    public SeleniumHelper(WebDriver driver){
+//        this.driver=driver;
+//    }
 
     public boolean waitForElementToBeClickable(WebDriver driver, By attributeValue, int waitTime) {
         boolean flag = false;
@@ -132,6 +130,19 @@ public class SeleniumHelper {
         }
     }
 
+    public boolean isElementDisplayed(WebElement element) {
+
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, 60);
+            wait.until(ExpectedConditions.visibilityOf(element));
+            return element.isDisplayed();
+
+        } catch (Exception t) {
+            System.out.println("Exception "+ t);
+            return false;
+
+        }
+    }
 
     public boolean waitForElementToBeClickable(WebElement element) {
 
@@ -233,6 +244,7 @@ public class SeleniumHelper {
             WebDriverWait wait =  new WebDriverWait(driver,60);
             wait.until(ExpectedConditions.visibilityOf(element));
             waitTillClickableElementExist(element);
+            scrollViewUsingJS(element);
             element.click();
             waitForPageLoad();
         }catch (Exception t)

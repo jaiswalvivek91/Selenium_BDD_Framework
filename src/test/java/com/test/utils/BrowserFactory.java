@@ -1,15 +1,13 @@
 package com.test.utils;
 
-import com.test.Pages.BaseFlight;
 //import enums.Browser;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
-public class BrowserFactory extends BaseFlight {
+public class BrowserFactory extends ReadConfig {
 
 	public static WebDriver getBrowserDriver(String strBrowserName){
 
