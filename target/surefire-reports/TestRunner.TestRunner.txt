@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: TestRunner.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 17.231 sec <<< FAILURE! - in TestRunner.TestRunner
+Verify flight booking for users #1(This feature will validate flight booking functionality)  Time elapsed: 9.714 sec  <<< FAILURE!
+java.lang.AssertionError: Msg is valid
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at com.test.stepDefinitions.FlightStepDefs.userValidatesPurchaseDetails(FlightStepDefs.java:138)
+	at ?.user validates purchase details(file:///C:/Users/Bhumika/Automation/AutomationFramwork-Selenium/src/test/resources/features/Flight.feature:11)
+
+Verify flight booking for users #2(This feature will validate flight booking functionality)  Time elapsed: 6.801 sec  <<< FAILURE!
+java.lang.AssertionError: Msg is valid
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at com.test.stepDefinitions.FlightStepDefs.userValidatesPurchaseDetails(FlightStepDefs.java:138)
+	at ?.user validates purchase details(file:///C:/Users/Bhumika/Automation/AutomationFramwork-Selenium/src/test/resources/features/Flight.feature:11)
+

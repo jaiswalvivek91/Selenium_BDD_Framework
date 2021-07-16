@@ -1,0 +1,201 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-07-16T17:59:35.086Z",
+        "before": [
+          {
+            "result": {
+              "duration": 5832000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.test.stepDefinitions.DemoShopStepDef.setUp()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "Verify Demo Shop Website",
+        "description": "",
+        "id": "this-feature-develop-a-web-test-solution-that-automates-below-simple-test-scenario--composed-as-bdd-scenarios.;verify-demo-shop-website;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 754000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.test.stepDefinitions.DemoShopStepDef.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5034000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I add \"4\" different products to my wish list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"4\"",
+                  "offset": 6
+                }
+              ],
+              "location": "com.test.stepDefinitions.DemoShopStepDef.iAddDifferentProductsToMyWishList(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 11000000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.test.stepDefinitions.DemoShopStepDef.addScreenshot(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1639000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I view my wishlist table",
+            "match": {
+              "location": "com.test.stepDefinitions.DemoShopStepDef.iViewMyWishlistTable()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 8000000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.test.stepDefinitions.DemoShopStepDef.addScreenshot(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 92000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I find total \"4\" selected items in my Wishlist",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"4\"",
+                  "offset": 13
+                }
+              ],
+              "location": "com.test.stepDefinitions.DemoShopStepDef.iFindTotalSelectedItemsInMyWishlist(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 8000000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.test.stepDefinitions.DemoShopStepDef.addScreenshot(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1586000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I search for lowest price product",
+            "match": {
+              "location": "com.test.stepDefinitions.DemoShopStepDef.iSearchForLowestPriceProduct()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 7000000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.test.stepDefinitions.DemoShopStepDef.addScreenshot(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 87000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I am able to add the lowest price item to my cart",
+            "match": {
+              "location": "com.test.stepDefinitions.DemoShopStepDef.iAmAbleToAddTheLowestPriceItemToMyCart()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 6000000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.test.stepDefinitions.DemoShopStepDef.addScreenshot(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1805000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I am able to verify the item in my cart",
+            "match": {
+              "location": "com.test.stepDefinitions.DemoShopStepDef.iAmAbleToVerifyTheItemInMyCart()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 6000000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.test.stepDefinitions.DemoShopStepDef.addScreenshot(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DemoShopTest"
+          }
+        ]
+      }
+    ],
+    "name": "This feature Develop a Web test solution that automates below simple test scenario, composed as BDD scenarios.",
+    "description": "",
+    "id": "this-feature-develop-a-web-test-solution-that-automates-below-simple-test-scenario--composed-as-bdd-scenarios.",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/DemoShop.feature",
+    "tags": []
+  }
+]
