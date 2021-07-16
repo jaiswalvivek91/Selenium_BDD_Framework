@@ -11,10 +11,3 @@ To run the automation scripts there are multiple ways.
 2.By maven command as :
 	mvn clean compile
 	mvn test
-
-3.The framework is integrated to Jenkins.
-Pipiline is created to trigger the automation scripts.
-Name of the Jenkins pipeline: 'Pipeline FlightCucumberProject'
-Flight.jenkins is located at "C:\FlightProjectAutomation\FlightBooking\Flight.jenkins"
-
-The report is shared as email notification with report attachment to valid emailID..
