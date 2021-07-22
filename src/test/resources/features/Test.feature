@@ -9,10 +9,10 @@ Feature: This feature will validate API
     Then I verify the Response code
 
 
-
+  @APItest
   Scenario: Check the Healthily Chat API with predefined values
     Given I have Healthily Chat Bot
-    When I enter user name as "Test1"
+    When I enter user name as "Testing3"
     Then I select an option or enter text as
       | options   |
       | Hello!    |
@@ -32,7 +32,7 @@ Feature: This feature will validate API
 
   Scenario: Check the Healthily Chat API with predefined values
     Given I have Healthily Chat Bot
-#    When I enter user name as "Test14"
+    When I enter user name as "Testing1234"
     Then I Type "Hello!"
     And I click on "OK" for GDPR
     And I click on "I accept" the GDPR terms
@@ -48,10 +48,10 @@ Feature: This feature will validate API
 
 
 
-  @APItest
+
   Scenario: First Opt for Health tests and cancel the conversation and then select Check symptoms
     Given I have Healthily Chat Bot
-#    When I enter user name as "Test14"
+    When I enter user name as "Test14"
     Then I Type "Hello!"
     And I click on "OK" for GDPR
     And I click on "I accept" the GDPR terms
@@ -72,6 +72,6 @@ Feature: This feature will validate API
 
   Scenario: Check the Healthily Chat API and interact with it for number of times
     Given I have Healthily Chat Bot
-#    When I enter user name as "Test6"
+    When I enter user name as "Test6"
     Then I interact with chat bot for 12 times
 

@@ -304,7 +304,7 @@ public class TestNew extends ReadConfig {
 
         System.out.println("Stopping the current consulation : ");
 
-        // Send command to stop the consulation and go back to What would you like to do next page
+        // Send command to stop the consultation and go back to What would you like to do next page
         response = Helper.getChatApiResponse("STOP_CS",user_name, user_name);
 
     }
